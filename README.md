@@ -1,6 +1,6 @@
-# Algorithms Console App
+# Algorithms Library
 
-- [Algorithms Console App](#algorithms-console-app)
+- [Algorithms Library](#algorithms-library)
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
@@ -58,10 +58,10 @@ git clone https://github.com/JakubKorytko/algorithms-library.git
 
 5. The program will start and display a menu with options for running different algorithms. Follow the on-screen instructions to input the required values and run the algorithm of your choice.
 
-Congratulations! You have successfully installed and run the Algorithms Console App on your local machine. If you encounter any issues during the installation process, please refer to the Troubleshooting section below or contact the developer for assistance.
+Congratulations! You have successfully installed and run the Algorithms Library on your local machine. If you encounter any issues during the installation process, please refer to the Troubleshooting section below or contact the developer for assistance.
 
 # Usage
-To use the Algorithms Console App, follow these steps:
+To use the Algorithms Library, follow these steps:
 
 1. Open the program by running the executable file (`Algorithms.exe`) that was created during the installation process.
 
@@ -83,11 +83,11 @@ Here are the available algorithms and their corresponding commands in the menu:
 
 - You can navigate the menu by typing "menu" and pressing Enter at any time. (except when you are running an algorithm)
 
-That's it! The Algorithms Console App is simple and easy to use. Have fun exploring different algorithms and experimenting with your own inputs.
+That's it! The Algorithms Library is simple and easy to use. Have fun exploring different algorithms and experimenting with your own inputs.
 
 # Algorithms
 
-The Algorithms Console App includes the following algorithms:
+The Algorithms Library includes the following algorithms:
 
 ## Fibonacci sequence calculator
 
@@ -107,13 +107,13 @@ A triangular number is a number that can be represented as a triangle of dots. F
   *   *   *
 ```
 
-To use the Triangular numbers calculator in the Algorithms Console App, type "triangular" in the menu and enter the number of terms you want to generate.
+To use the Triangular numbers calculator in the Algorithms Library, type "triangular" in the menu and enter the number of terms you want to generate.
 
 ## Sieve of Eratosthenes
 
 The Sieve of Eratosthenes is a simple and efficient algorithm for finding all prime numbers up to a given limit. The algorithm works by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the multiples of 2. For example, to find all prime numbers up to 30, we start with the number 2 and mark its multiples (4, 6, 8, etc.) as composite. Then we move to the next prime number (3) and mark its multiples (6, 9, 12, etc.) as composite. We continue this process until all primes have been processed.
 
-To use the Sieve of Eratosthenes in the Algorithms Console App, type "eratosthenes" in the menu and enter the maximum number you want to generate primes up to.
+To use the Sieve of Eratosthenes in the Algorithms Library, type "eratosthenes" in the menu and enter the maximum number you want to generate primes up to.
 
 ## Hanoi tower solver
 
@@ -123,7 +123,7 @@ The Towers of Hanoi is a classic puzzle game where you have three rods and a num
 2. Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty rod.
 3. No disk may be placed on top of a smaller disk.
 
-To use the Hanoi tower solver in the Algorithms Console App, type "hanoi" in the menu and enter the number of disks you want to solve for. It will then display the steps required to solve the puzzle.
+To use the Hanoi tower solver in the Algorithms Library, type "hanoi" in the menu and enter the number of disks you want to solve for. It will then display the steps required to solve the puzzle.
 
 ## Factorial calculator
 The factorial of a positive integer n is the product of all positive integers from 1 to n. For example, the factorial of 5 (written as 5!) is:
@@ -132,7 +132,7 @@ The factorial of a positive integer n is the product of all positive integers fr
 5! = 5 * 4 * 3 * 2 * 1 = 120
 ```
 
-To use the Factorial calculator in the Algorithms Console App, type "factorial" in the menu and enter the number you want to calculate the factorial for. The app will display the result.
+To use the Factorial calculator in the Algorithms Library, type "factorial" in the menu and enter the number you want to calculate the factorial for. The app will display the result.
 
 # License
 

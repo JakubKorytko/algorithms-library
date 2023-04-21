@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Algorithms.Modules
+namespace AlgorithmsLibrary.Algorithms
 {
-    internal class Fibonacci: Module
+    internal class Fibonacci: Algorithm
     {
         static private int calculate(int amount)
         {

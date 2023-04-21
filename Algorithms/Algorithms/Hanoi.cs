@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Algorithms.Modules
+namespace AlgorithmsLibrary.Algorithms
 {
-    internal class Hanoi: Module
+    internal class Hanoi: Algorithm
     {
         static private string createSteps(int n, char A = 'A', char B = 'B', char C = 'C') {
                
@@ -14,7 +10,7 @@ namespace Algorithms.Modules
             {
                 string steps;
                 steps = createSteps(n - 1, A, C, B);
-                steps += A+" -> "+B+"; ";
+                steps += A+" -> "+C+"; ";
                 steps += createSteps(n - 1, B, A, C);
 
                 return steps;
