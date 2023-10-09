@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Algorithms.Modules
+namespace AlgorithmsLibrary.Algorithms
 {
-    internal class Eratosthenes: Module
+    internal class Eratosthenes: Algorithm
     {
         static private int[] calculate(int n)
         {

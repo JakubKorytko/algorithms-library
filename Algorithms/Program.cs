@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Algorithms
+﻿namespace AlgorithmsLibrary
 {
     internal class Program
     {

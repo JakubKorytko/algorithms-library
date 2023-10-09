@@ -1,7 +1,7 @@
 ﻿using System;
-using Algorithms.Modules;
+using AlgorithmsLibrary.Algorithms;
 
-namespace Algorithms
+namespace AlgorithmsLibrary
 {
     internal class Menu
     {

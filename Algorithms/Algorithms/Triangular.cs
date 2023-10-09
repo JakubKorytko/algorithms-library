@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Algorithms.Modules
+namespace AlgorithmsLibrary.Algorithms
 {
-    internal class Triangular: Module
+    internal class Triangular: Algorithm
     {
         static private int calculate(int amount)
         {

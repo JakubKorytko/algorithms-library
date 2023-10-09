@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A7F7BD1D-6ACF-48C2-B2EB-40892994FFFC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Algorithms</RootNamespace>
-    <AssemblyName>Algorithms</AssemblyName>
+    <RootNamespace>AlgorithmsLibrary</RootNamespace>
+    <AssemblyName>AlgorithmsLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,12 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Menu.cs" />
-    <Compile Include="Modules\Hanoi.cs" />
-    <Compile Include="Modules\Module.cs" />
-    <Compile Include="Modules\Eratosthenes.cs" />
-    <Compile Include="Modules\Factorial.cs" />
-    <Compile Include="Modules\Fibonacci.cs" />
-    <Compile Include="Modules\Triangular.cs" />
+    <Compile Include="Algorithms\Hanoi.cs" />
+    <Compile Include="Algorithms\Algorithm.cs" />
+    <Compile Include="Algorithms\Eratosthenes.cs" />
+    <Compile Include="Algorithms\Factorial.cs" />
+    <Compile Include="Algorithms\Fibonacci.cs" />
+    <Compile Include="Algorithms\Triangular.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

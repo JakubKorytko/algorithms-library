@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Algorithms.Modules
+namespace AlgorithmsLibrary.Algorithms
 {
-    internal class Factorial: Module
+    internal class Factorial: Algorithm
     {
         static private UInt64 calculate(int amount)
         {
