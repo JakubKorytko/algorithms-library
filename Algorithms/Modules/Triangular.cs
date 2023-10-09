@@ -21,7 +21,8 @@ namespace Algorithms.Modules
             if (isNumber) quanity = int.Parse(input);
             else return;
 
-            for (int i = 0; i < quanity; i++) Console.WriteLine("Triangular for " + i + ": " + calculate(i));
+            Console.Write("First "+quanity+" triangular numbers: ");
+            for (int i = 0; i < quanity; i++) Console.Write(calculate(i)+" ");
         }
     }
 }
