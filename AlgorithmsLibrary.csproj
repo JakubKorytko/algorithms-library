@@ -43,18 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu.cs" />
-    <Compile Include="Algorithms\Hanoi.cs" />
-    <Compile Include="Algorithms\Algorithm.cs" />
-    <Compile Include="Algorithms\Eratosthenes.cs" />
-    <Compile Include="Algorithms\Factorial.cs" />
-    <Compile Include="Algorithms\Fibonacci.cs" />
-    <Compile Include="Algorithms\Triangular.cs" />
+    <Compile Include="Components\Algorithms\Algorithm.cs" />
+    <Compile Include="Components\Algorithms\Eratosthenes.cs" />
+    <Compile Include="Components\Algorithms\Factorial.cs" />
+    <Compile Include="Components\Algorithms\Fibonacci.cs" />
+    <Compile Include="Components\Algorithms\Hanoi.cs" />
+    <Compile Include="Components\Algorithms\Triangular.cs" />
+    <Compile Include="Components\Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="LICENSE" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
