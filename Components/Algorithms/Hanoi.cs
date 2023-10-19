@@ -36,7 +36,6 @@ namespace AlgorithmsLibrary.Algorithms
 
         public override void Display()
         {
-            int quantity = 1;
 
             Console.Write("Enter the amount of Hanoi disks: ");
             string input = Console.ReadLine();
@@ -48,9 +47,9 @@ namespace AlgorithmsLibrary.Algorithms
                 return;
             }
 
-            quantity = int.Parse(input);
+            int quantity = int.Parse(input);
 
-            if (isNumber && quantity<=0)
+            if (quantity <= 0)
             {
                 Console.WriteLine("Amount of disks must be greater than 0! Setting it to 1 instead...");
                 quantity = 1;

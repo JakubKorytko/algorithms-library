@@ -40,8 +40,6 @@ namespace AlgorithmsLibrary.Algorithms
 
         public override void Display()
         {
-            int n;
-
             Console.WriteLine("Algorithm for finding prime numbers from given range [2,n]");
             Console.Write("Enter the value of the n: ");
             string input = Console.ReadLine();
@@ -53,7 +51,7 @@ namespace AlgorithmsLibrary.Algorithms
                 return;
             }
 
-            n = int.Parse(input);
+            int n = int.Parse(input);
 
             if (n < 2)
             {

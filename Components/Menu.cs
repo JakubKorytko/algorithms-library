@@ -8,16 +8,16 @@ namespace AlgorithmsLibrary
     {
 
         private static AlgorithmObject[] algorithms;
-        static private string options;
+        private static string options;
 
-        static public void Run()
+        public static void Run()
         {
             SetAlgorithmsIfEmpty();
             GenerateOptions();
-            Menu.Select("menu");
+            Select("menu");
         }
 
-        static private void SetAlgorithmsIfEmpty()
+        private static void SetAlgorithmsIfEmpty()
         {
             if (algorithms == null) {
                 algorithms = new AlgorithmsHandler().GetAlgorithms();
@@ -25,7 +25,7 @@ namespace AlgorithmsLibrary
 
         }
 
-        static public void SelectAlgorithm(string algorithmName)
+        public static void SelectAlgorithm(string algorithmName)
         {
             SetAlgorithmsIfEmpty();
 
@@ -42,7 +42,7 @@ namespace AlgorithmsLibrary
 
         }
 
-        static public void GenerateOptions()
+        public static void GenerateOptions()
         {
 
             SetAlgorithmsIfEmpty();
