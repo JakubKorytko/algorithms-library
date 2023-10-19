@@ -1,11 +1,7 @@
-﻿using System;
-using AlgorithmsLibrary.Algorithms;
-
-namespace AlgorithmsLibrary
+﻿namespace AlgorithmsLibrary
 {
     internal static class Program
     {
-
         static void Main() {
 
             Menu.Run();

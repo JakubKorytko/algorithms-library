@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AlgorithmsLibrary.Algorithms;
-using AlgorithmsLibrary.AlgorithmsCore;
 
 namespace AlgorithmsLibrary.AlgorithmsCore
 {
@@ -12,7 +7,6 @@ namespace AlgorithmsLibrary.AlgorithmsCore
     {
         private Type[] GetDerivedClasses()
         {
-            // get array of derived classes
             Type[] DerivedClasses = AppDomain.CurrentDomain.GetAssemblies()
              .SelectMany(domainAssembly => domainAssembly.GetTypes())
              .Where(type => typeof(Algorithm).IsAssignableFrom(type) && type.Name != "Algorithm"

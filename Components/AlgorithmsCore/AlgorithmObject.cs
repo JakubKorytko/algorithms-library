@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AlgorithmsLibrary.Algorithms;
-
-namespace AlgorithmsLibrary.AlgorithmsCore
+﻿namespace AlgorithmsLibrary.AlgorithmsCore
 {
     internal class AlgorithmObject
     {
