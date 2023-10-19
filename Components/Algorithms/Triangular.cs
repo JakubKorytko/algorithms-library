@@ -4,13 +4,15 @@ namespace AlgorithmsLibrary.Algorithms
 {
     internal class Triangular: Algorithm
     {
-        static private int calculate(int amount)
+        public override string Description { get { return "Triangular numbers calculator"; } }
+
+        private int calculate(int amount)
         {
             if (amount <= 0) return 0;
             else return amount + calculate(amount - 1);
         }
 
-        static public void display()
+        public override void display()
         {
             int quanity;
 

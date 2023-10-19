@@ -4,7 +4,9 @@ namespace AlgorithmsLibrary.Algorithms
 {
     internal class Hanoi: Algorithm
     {
-        static private string createSteps(int n, char A = 'A', char B = 'B', char C = 'C') {
+        public override string Description { get { return "Hanoi tower solver"; } }
+
+        private string createSteps(int n, char A = 'A', char B = 'B', char C = 'C') {
                
             if (n > 0)
             {
@@ -18,7 +20,7 @@ namespace AlgorithmsLibrary.Algorithms
             return "";
         }
 
-        static public void display()
+        public override void display()
         {
             int quantity = 1;
 

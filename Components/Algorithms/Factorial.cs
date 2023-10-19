@@ -4,7 +4,9 @@ namespace AlgorithmsLibrary.Algorithms
 {
     internal class Factorial: Algorithm
     {
-        static private UInt64 calculate(int amount)
+        public override string Description { get { return "Factorial calculator"; } }
+
+        private UInt64 calculate(int amount)
         {
             UInt64 longAmount = (UInt64)amount;
 
@@ -12,7 +14,7 @@ namespace AlgorithmsLibrary.Algorithms
             else return longAmount * calculate(amount - 1);
         }
 
-        static public void display()
+        public override void display()
         {
             int quanity;
 

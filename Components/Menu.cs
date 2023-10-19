@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 using AlgorithmsLibrary.Algorithms;
 
 namespace AlgorithmsLibrary
@@ -6,16 +8,53 @@ namespace AlgorithmsLibrary
     internal class Menu
     {
 
-        static public string options =
-            "What program would you like to use? Available options:\n\n"
-            + "hanoi - Hanoi tower solver\n"
-            + "fibonacci - Fibonacci sequence calculator\n"
-            + "triangular - Triangular numbers calculator\n"
-            + "factorial - Factorial calculator\n"
-            + "eratosthenes - Sieve of Eratosthenes\n\n"
-            + "Enter 'menu' to display this menu again\n"
-            + "Enter 'exit' to end the program...";
+        private static AlgorithmObject[] algorithms;
+        static private string options;
 
+        static public void Run()
+        {
+            SetAlgorithmsIfEmpty();
+            GenerateOptions();
+            Menu.select("menu");
+        }
+
+        static private void SetAlgorithmsIfEmpty()
+        {
+            if (algorithms == null) {
+                algorithms = new Algorithm().GetAlgorithms();
+            }
+
+        }
+
+        static public void SelectAlgorithm(string algorithmName)
+        {
+            SetAlgorithmsIfEmpty();
+
+            AlgorithmObject result = algorithms.SingleOrDefault(
+            algorithm => algorithm.name.ToLower() == algorithmName);
+
+            if (result == null)
+            {
+                error();
+                return;
+            }
+
+            result.instance.display();
+
+        }
+
+        static public void GenerateOptions()
+        {
+
+            SetAlgorithmsIfEmpty();
+
+            options = "";
+
+            foreach (var algorithm in algorithms)
+            {
+                options += algorithm.GetTextDescription() + "\n";
+            }
+        }
 
         public static string input()
         {
@@ -31,7 +70,10 @@ namespace AlgorithmsLibrary
         public static void display()
         {
             Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("What program would you like to use? Available options:\n");
             Console.Write(options);
+            Console.WriteLine("\nEnter 'menu' to display this menu again\n"
+            + "Enter 'exit' to end the program...");
             Console.ResetColor();
         }
 
@@ -41,32 +83,19 @@ namespace AlgorithmsLibrary
             Console.Write("You chose wrong option from the menu! (enter 'menu' to display menu again)");
             Console.ResetColor();
         }
-        public static bool select(string n)
+        public static bool select(string choice)
         {
-            switch (n)
+            string choiceLowered = choice.ToLower();
+
+            switch (choiceLowered)
             {
-                case "hanoi":
-                    Hanoi.display();
-                    break;
-                case "fibonacci":
-                    Fibonacci.display();
-                    break;
-                case "triangular":
-                    Triangular.display();
-                    break;
-                case "factorial":
-                    Factorial.display();
-                    break;
-                case "eratosthenes":
-                    Eratosthenes.display();
-                    break;
                 case "menu":
                     display();
                     break;
                 case "exit":
                     return false;
                 default:
-                    error();
+                    SelectAlgorithm(choiceLowered);
                     break;
             }
             Console.WriteLine("\n");

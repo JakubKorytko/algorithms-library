@@ -4,14 +4,16 @@ namespace AlgorithmsLibrary.Algorithms
 {
     internal class Fibonacci: Algorithm
     {
-        static private int calculate(int amount)
+        public override string Description { get { return "Fibonacci sequence calculator"; } }
+
+        private int calculate(int amount)
         {
             if (amount <= 0) return 0;
             else if (amount == 1) return 1;
             else return calculate(amount - 1) + calculate(amount - 2);
         }
 
-        static public void display()
+        public override void display()
         {
             int quanity;
 

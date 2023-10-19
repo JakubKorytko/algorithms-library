@@ -4,7 +4,9 @@ namespace AlgorithmsLibrary.Algorithms
 {
     internal class Eratosthenes: Algorithm
     {
-        static private int[] calculate(int n)
+        public override string Description { get { return "Sieve of Eratosthenes"; } }
+
+        private int[] calculate(int n)
         {
 
             bool[] primeBools = new bool[n+1];
@@ -35,11 +37,11 @@ namespace AlgorithmsLibrary.Algorithms
             return primeNumbers;
         }
 
-        static public void display()
+        public override void display()
         {
             int n;
 
-            Console.WriteLine("Algorith for finding prime numbers from given range [2,n]");
+            Console.WriteLine("Algorithm for finding prime numbers from given range [2,n]");
             Console.Write("Enter the value of the n: ");
             string input = Console.ReadLine();
 
