@@ -5,7 +5,7 @@ using AlgorithmsLibrary.Algorithms;
 
 namespace AlgorithmsLibrary
 {
-    internal class Menu
+    internal static class Menu
     {
 
         private static AlgorithmObject[] algorithms;
@@ -15,7 +15,7 @@ namespace AlgorithmsLibrary
         {
             SetAlgorithmsIfEmpty();
             GenerateOptions();
-            Menu.select("menu");
+            Menu.Select("menu");
         }
 
         static private void SetAlgorithmsIfEmpty()
@@ -35,11 +35,11 @@ namespace AlgorithmsLibrary
 
             if (result == null)
             {
-                error();
+                Error();
                 return;
             }
 
-            result.instance.display();
+            result.instance.Display();
 
         }
 
@@ -56,7 +56,7 @@ namespace AlgorithmsLibrary
             }
         }
 
-        public static string input()
+        public static string Input()
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("select> ");
@@ -67,7 +67,7 @@ namespace AlgorithmsLibrary
             return option;
         }
 
-        public static void display()
+        public static void Display()
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("What program would you like to use? Available options:\n");
@@ -77,20 +77,20 @@ namespace AlgorithmsLibrary
             Console.ResetColor();
         }
 
-        public static void error()
+        public static void Error()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("You chose wrong option from the menu! (enter 'menu' to display menu again)");
             Console.ResetColor();
         }
-        public static bool select(string choice)
+        public static bool Select(string choice)
         {
             string choiceLowered = choice.ToLower();
 
             switch (choiceLowered)
             {
                 case "menu":
-                    display();
+                    Display();
                     break;
                 case "exit":
                     return false;

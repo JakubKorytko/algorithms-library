@@ -3,16 +3,16 @@ using AlgorithmsLibrary.Algorithms;
 
 namespace AlgorithmsLibrary
 {
-    internal class Program
+    internal static class Program
     {
 
-        static void Main(string[] args) {
+        static void Main() {
 
             Menu.Run();
 
             bool status = true;
 
-            while (status) status = Menu.select(Menu.input());
+            while (status) status = Menu.Select(Menu.Input());
         }
     }
 }

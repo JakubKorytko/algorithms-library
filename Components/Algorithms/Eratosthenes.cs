@@ -6,7 +6,7 @@ namespace AlgorithmsLibrary.Algorithms
     {
         public override string Description { get { return "Sieve of Eratosthenes"; } }
 
-        private int[] calculate(int n)
+        private int[] Calculate(int n)
         {
 
             bool[] primeBools = new bool[n+1];
@@ -37,7 +37,7 @@ namespace AlgorithmsLibrary.Algorithms
             return primeNumbers;
         }
 
-        public override void display()
+        public override void Display()
         {
             int n;
 
@@ -45,7 +45,7 @@ namespace AlgorithmsLibrary.Algorithms
             Console.Write("Enter the value of the n: ");
             string input = Console.ReadLine();
 
-            bool isNumber = intParseTest(input);
+            bool isNumber = IntParseTest(input);
             if (isNumber) n = int.Parse(input);
             else return;
 
@@ -55,7 +55,7 @@ namespace AlgorithmsLibrary.Algorithms
                 n = 2;
             }
 
-            int[] res = calculate(n);
+            int[] res = Calculate(n);
 
             Console.Write("Prime numbers in range [2," + n + "]: ");
             for (int i = 0; i < res.Length; i++) Console.Write(res[i] + " ");

@@ -4,14 +4,6 @@ using System.Reflection;
 
 namespace AlgorithmsLibrary.Algorithms
 {
-
-   /* internal class AlgorithmValidationResult
-    {
-        public bool TestPassed { get; private set; }
-        public string AdditionalInfo { get; private set; }
-
-    } */
-
     internal class AlgorithmObject
     {
 
@@ -28,14 +20,23 @@ namespace AlgorithmsLibrary.Algorithms
 
     internal class Algorithm
     {
+
+        // Methods to override by derived classes
         public virtual string Description { get { return "No description provided for this algorithm"; } }
 
-        public bool intParseTest(string num)
+        public virtual void Display()
+        {
+            Console.WriteLine("No display method defined for this algorithm");
+        }
+
+        // Tools widely used in the derived classes
+
+        public bool IntParseTest(string num)
         {
 
-            bool isNumber = int.TryParse(num, out int n);
+            bool isNumber = int.TryParse(num, out int _);
 
-            if (isNumber == false)
+            if (!isNumber)
             {
                 Console.Write("You must enter a number!");
             }
@@ -44,15 +45,7 @@ namespace AlgorithmsLibrary.Algorithms
 
         }
 
-        public void PrintDescription()
-        {
-            Console.WriteLine(Description);
-        }
-
-        public virtual void display()
-        {
-            Console.WriteLine("No display method defined for this algorithm");
-        }
+        // Methods for retrieving derived classes
 
         private Type[] GetDerivedClasses()
         {
@@ -68,9 +61,8 @@ namespace AlgorithmsLibrary.Algorithms
         public AlgorithmObject[] GetAlgorithms() {
 
             Type[] classes = GetDerivedClasses();
-            AlgorithmObject[] algorithms;
-
-            algorithms = new AlgorithmObject[classes.Length];
+            AlgorithmObject[] algorithms = new AlgorithmObject[classes.Length];
+            
             int i = 0;
 
             foreach (Type cls in classes)
