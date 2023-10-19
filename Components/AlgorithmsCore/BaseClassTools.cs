@@ -24,10 +24,9 @@ namespace AlgorithmsLibrary.AlgorithmsCore
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write("Please provide a valid integer number\n");
 
-                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.ResetColor();
                 Console.Write("Returning to the menu...");
 
-                Console.ResetColor();
                 return false;
             }
         }

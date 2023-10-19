@@ -7,10 +7,5 @@
         public string description;
         public Algorithm instance;
 
-        public string GetTextDescription()
-        {
-            return name + " (" + description + ")";
-        }
-
     }
 }
