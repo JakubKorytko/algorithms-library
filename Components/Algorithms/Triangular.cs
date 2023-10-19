@@ -1,4 +1,5 @@
 ﻿using System;
+using AlgorithmsLibrary.AlgorithmsCore;
 
 namespace AlgorithmsLibrary.Algorithms
 {

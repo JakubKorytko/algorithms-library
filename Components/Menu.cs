@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using AlgorithmsLibrary.Algorithms;
+using AlgorithmsLibrary.AlgorithmsCore;
 
 namespace AlgorithmsLibrary
 {
@@ -21,7 +22,7 @@ namespace AlgorithmsLibrary
         static private void SetAlgorithmsIfEmpty()
         {
             if (algorithms == null) {
-                algorithms = new Algorithm().GetAlgorithms();
+                algorithms = new AlgorithmsHandler().GetAlgorithms();
             }
 
         }

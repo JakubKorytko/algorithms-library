@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\Algorithms\Algorithm.cs" />
+    <Compile Include="Components\AlgorithmsCore\AlgorithmObject.cs" />
+    <Compile Include="Components\AlgorithmsCore\AlgorithmsHandler.cs" />
+    <Compile Include="Components\AlgorithmsCore\BaseClass.cs" />
+    <Compile Include="Components\AlgorithmsCore\BaseClassTools.cs" />
     <Compile Include="Components\Algorithms\Eratosthenes.cs" />
     <Compile Include="Components\Algorithms\Factorial.cs" />
     <Compile Include="Components\Algorithms\Fibonacci.cs" />

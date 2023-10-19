@@ -1,52 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using AlgorithmsLibrary.Algorithms;
+using AlgorithmsLibrary.AlgorithmsCore;
 
-namespace AlgorithmsLibrary.Algorithms
+namespace AlgorithmsLibrary.AlgorithmsCore
 {
-    internal class AlgorithmObject
+    internal class AlgorithmsHandler
     {
-
-        public string name;
-        public string description;
-        public Algorithm instance;
-
-        public string GetTextDescription()
-        {
-            return name + " (" + description + ")";
-        }
-
-    }
-
-    internal class Algorithm
-    {
-
-        // Methods to override by derived classes
-        public virtual string Description { get { return "No description provided for this algorithm"; } }
-
-        public virtual void Display()
-        {
-            Console.WriteLine("No display method defined for this algorithm");
-        }
-
-        // Tools widely used in the derived classes
-
-        public bool IntParseTest(string num)
-        {
-
-            bool isNumber = int.TryParse(num, out int _);
-
-            if (!isNumber)
-            {
-                Console.Write("You must enter a number!");
-            }
-
-            return isNumber;
-
-        }
-
-        // Methods for retrieving derived classes
-
         private Type[] GetDerivedClasses()
         {
             // get array of derived classes
@@ -58,11 +21,12 @@ namespace AlgorithmsLibrary.Algorithms
             return DerivedClasses;
         }
 
-        public AlgorithmObject[] GetAlgorithms() {
+        public AlgorithmObject[] GetAlgorithms()
+        {
 
             Type[] classes = GetDerivedClasses();
             AlgorithmObject[] algorithms = new AlgorithmObject[classes.Length];
-            
+
             int i = 0;
 
             foreach (Type cls in classes)
@@ -83,7 +47,5 @@ namespace AlgorithmsLibrary.Algorithms
             return algorithms;
 
         }
-
     }
-
 }
