@@ -10,11 +10,15 @@ namespace AlgorithmsLibrary
         private static AlgorithmObject[] algorithms;
         private static string options;
 
-        public static void Run()
+        public static void RunLoop()
         {
+            bool loop = true;
+
             SetAlgorithmsIfEmpty();
             GenerateOptions();
-            Select("menu");
+            ShowOptions();
+
+            while (loop) loop = Select(Input());
         }
 
         private static void SetAlgorithmsIfEmpty()
@@ -66,13 +70,13 @@ namespace AlgorithmsLibrary
             return option;
         }
 
-        public static void Display()
+        public static void ShowOptions()
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("What program would you like to use? Available options:\n");
             Console.Write(options);
             Console.WriteLine("\nEnter 'menu' to display this menu again\n"
-            + "Enter 'exit' to end the program...");
+            + "Enter 'exit' to end the program...\n");
             Console.ResetColor();
         }
 
@@ -89,15 +93,15 @@ namespace AlgorithmsLibrary
             switch (choiceLowered)
             {
                 case "menu":
-                    Display();
+                    ShowOptions();
                     break;
                 case "exit":
                     return false;
                 default:
                     SelectAlgorithm(choiceLowered);
+                    Console.WriteLine("\n");
                     break;
             }
-            Console.WriteLine("\n");
             return true;
         }
     }
