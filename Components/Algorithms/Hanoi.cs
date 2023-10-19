@@ -41,9 +41,14 @@ namespace AlgorithmsLibrary.Algorithms
             Console.Write("Enter the amount of Hanoi disks: ");
             string input = Console.ReadLine();
 
-            bool isNumber = IntParseTest(input);
+            bool isNumber = IntParseTestWithOutput(input);
             
-            if (isNumber) quantity = int.Parse(input);
+            if (!isNumber)
+            {
+                return;
+            }
+
+            quantity = int.Parse(input);
 
             if (isNumber && quantity<=0)
             {

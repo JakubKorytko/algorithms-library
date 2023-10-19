@@ -46,9 +46,14 @@ namespace AlgorithmsLibrary.Algorithms
             Console.Write("Enter the value of the n: ");
             string input = Console.ReadLine();
 
-            bool isNumber = IntParseTest(input);
-            if (isNumber) n = int.Parse(input);
-            else return;
+            bool isNumber = IntParseTestWithOutput(input);
+
+            if (!isNumber)
+            {
+                return;
+            }
+
+            n = int.Parse(input);
 
             if (n < 2)
             {

@@ -22,9 +22,14 @@ namespace AlgorithmsLibrary.Algorithms
             Console.Write("What factorial do you want to display: ");
             string input = Console.ReadLine();
 
-            bool isNumber = IntParseTest(input);
-            if (isNumber) quanity = int.Parse(input);
-            else return;
+            bool isNumber = IntParseTestWithOutput(input);
+
+            if (!isNumber)
+            {
+                return;
+            }
+
+            quanity = int.Parse(input);
 
             Console.Write("Factorial of " + quanity + ": " + Calculate(quanity));
         }

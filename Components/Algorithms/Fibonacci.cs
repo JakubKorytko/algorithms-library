@@ -21,9 +21,14 @@ namespace AlgorithmsLibrary.Algorithms
             Console.Write("How many fibonacci numbers do you want to display: ");
             string input = Console.ReadLine();
 
-            bool isNumber = IntParseTest(input);
-            if (isNumber) quanity = int.Parse(input);
-            else return;
+            bool isNumber = IntParseTestWithOutput(input);
+
+            if (!isNumber)
+            {
+                return;
+            }
+
+            quanity = int.Parse(input);
 
             Console.Write(quanity + " fibonacci numbers: ");
             for (int i = 0; i < quanity; i++) Console.Write(Calculate(i) + " ");

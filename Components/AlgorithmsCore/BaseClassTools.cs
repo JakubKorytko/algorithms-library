@@ -13,13 +13,27 @@ namespace AlgorithmsLibrary.AlgorithmsCore
 
             bool isNumber = int.TryParse(num, out int _);
 
-            if (!isNumber)
-            {
-                Console.Write("You must enter a number!");
-            }
-
             return isNumber;
 
+        }
+
+        public bool IntParseTestWithOutput (string num)
+        {
+            bool testResult = IntParseTest(num);
+            if (testResult)
+            {
+                return true;
+            } else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("Please provide a valid integer number\n");
+
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("Returning to the menu...");
+
+                Console.ResetColor();
+                return false;
+            }
         }
     }
 }
