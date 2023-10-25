@@ -2,35 +2,33 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// Ogólne informacje o zestawie są kontrolowane poprzez następujący 
-// zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
-// powiązane z zestawem.
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
 [assembly: AssemblyTitle("Algorithms")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Algorithms")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
+[assembly: AssemblyCopyright("Copyright © Jakub Korytko 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-// Ustawienie elementu ComVisible na wartość false sprawia, że typy w tym zestawie są niewidoczne
-// dla składników COM. Jeśli potrzebny jest dostęp do typu w tym zestawie z
-// COM, ustaw wartość true dla atrybutu ComVisible tego typu.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
 
-// Następujący identyfikator GUID jest identyfikatorem biblioteki typów w przypadku udostępnienia tego projektu w modelu COM
+// The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("a7f7bd1d-6acf-48c2-b2eb-40892994fffc")]
 
-// Informacje o wersji zestawu zawierają następujące cztery wartości:
+// Version information for an assembly consists of the following four values:
 //
-//      Wersja główna
-//      Wersja pomocnicza
-//      Numer kompilacji
-//      Poprawka
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
 //
-// Możesz określić wszystkie wartości lub użyć domyślnych numerów kompilacji i poprawki
-// przy użyciu symbolu „*”, tak jak pokazano poniżej:
-// [assembly: AssemblyVersion("1.0.*")]
+
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
