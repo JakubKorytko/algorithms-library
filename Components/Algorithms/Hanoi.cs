@@ -3,11 +3,12 @@ using AlgorithmsLibrary.AlgorithmsCore;
 
 namespace AlgorithmsLibrary.Algorithms
 {
-    internal class Hanoi: Algorithm
+    internal class Hanoi : Algorithm
     {
         public override string Description { get { return "Hanoi tower solver"; } }
 
-        private string CreateSteps(int n, char A = 'A', char B = 'B', char C = 'C') {
+        private string CreateSteps(int n, char A = 'A', char B = 'B', char C = 'C')
+        {
 
             if (n > 0)
             {
@@ -41,7 +42,7 @@ namespace AlgorithmsLibrary.Algorithms
             string input = Console.ReadLine();
 
             bool isNumber = IntParseTestWithOutput(input);
-            
+
             if (!isNumber)
             {
                 return;
@@ -55,7 +56,7 @@ namespace AlgorithmsLibrary.Algorithms
                 quantity = 1;
             }
 
-            Console.Write("Steps (assuming that starting position of the disks is tower A and the target position is tower C):\n"+ CreateSteps(quantity));
+            Console.Write("Steps (assuming that starting position of the disks is tower A and the target position is tower C):\n" + CreateSteps(quantity));
 
         }
     }

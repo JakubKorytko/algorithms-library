@@ -2,7 +2,8 @@
 {
     internal static class Program
     {
-        static void Main() {
+        static void Main()
+        {
             Menu.RunLoop();
         }
     }

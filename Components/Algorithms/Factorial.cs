@@ -3,7 +3,7 @@ using AlgorithmsLibrary.AlgorithmsCore;
 
 namespace AlgorithmsLibrary.Algorithms
 {
-    internal class Factorial: Algorithm
+    internal class Factorial : Algorithm
     {
         public override string Description { get { return "Factorial calculator"; } }
 

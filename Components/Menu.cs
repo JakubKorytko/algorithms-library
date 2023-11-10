@@ -22,7 +22,8 @@ namespace AlgorithmsLibrary
 
         private static void SetAlgorithmsIfEmpty()
         {
-            if (algorithms == null) {
+            if (algorithms == null)
+            {
                 algorithms = new AlgorithmsHandler().GetAlgorithms();
             }
 

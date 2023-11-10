@@ -3,7 +3,7 @@ using AlgorithmsLibrary.AlgorithmsCore;
 
 namespace AlgorithmsLibrary.Algorithms
 {
-    internal class Fibonacci: Algorithm
+    internal class Fibonacci : Algorithm
     {
         public override string Description { get { return "Fibonacci sequence calculator"; } }
 

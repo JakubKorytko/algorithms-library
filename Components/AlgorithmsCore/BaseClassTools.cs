@@ -13,13 +13,14 @@ namespace AlgorithmsLibrary.AlgorithmsCore
 
         }
 
-        public bool IntParseTestWithOutput (string num)
+        public bool IntParseTestWithOutput(string num)
         {
             bool testResult = IntParseTest(num);
             if (testResult)
             {
                 return true;
-            } else
+            }
+            else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write("Please provide a valid integer number\n");

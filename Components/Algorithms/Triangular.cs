@@ -3,7 +3,7 @@ using AlgorithmsLibrary.AlgorithmsCore;
 
 namespace AlgorithmsLibrary.Algorithms
 {
-    internal class Triangular: Algorithm
+    internal class Triangular : Algorithm
     {
         public override string Description { get { return "Triangular numbers calculator"; } }
 
@@ -29,8 +29,8 @@ namespace AlgorithmsLibrary.Algorithms
 
             quanity = int.Parse(input);
 
-            Console.Write("First "+quanity+" triangular numbers: ");
-            for (int i = 0; i < quanity; i++) Console.Write(Calculate(i)+" ");
+            Console.Write("First " + quanity + " triangular numbers: ");
+            for (int i = 0; i < quanity; i++) Console.Write(Calculate(i) + " ");
         }
     }
 }

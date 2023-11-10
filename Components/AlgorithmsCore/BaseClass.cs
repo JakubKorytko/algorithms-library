@@ -2,7 +2,7 @@
 
 namespace AlgorithmsLibrary.AlgorithmsCore
 {
-    internal class Algorithm: BaseClassTools
+    internal class Algorithm : BaseClassTools
     {
         public virtual string Description { get { return "No description provided for this algorithm"; } }
 

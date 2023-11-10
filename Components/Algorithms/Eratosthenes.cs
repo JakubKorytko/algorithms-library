@@ -3,14 +3,14 @@ using AlgorithmsLibrary.AlgorithmsCore;
 
 namespace AlgorithmsLibrary.Algorithms
 {
-    internal class Eratosthenes: Algorithm
+    internal class Eratosthenes : Algorithm
     {
         public override string Description { get { return "Sieve of Eratosthenes"; } }
 
         private int[] Calculate(int n)
         {
 
-            bool[] primeBools = new bool[n+1];
+            bool[] primeBools = new bool[n + 1];
             int primeCount = n - 1, primeIndex = 0;
 
             for (int i = 0; i <= n; i++) primeBools[i] = true;
@@ -30,7 +30,7 @@ namespace AlgorithmsLibrary.Algorithms
 
             int[] primeNumbers = new int[primeCount];
 
-            for (int i = 2; i<=n; i++)
+            for (int i = 2; i <= n; i++)
             {
                 if (primeBools[i]) primeNumbers[primeIndex++] = i;
             }
