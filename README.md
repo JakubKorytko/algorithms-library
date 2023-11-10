@@ -44,7 +44,7 @@ Please note that this program has only been tested on Windows operating systems.
 ## Installation
 To install and run this program on your local machine, follow these steps:
 
-1. Clone this repository to your local machine using Git or download the zip file and extract it to a directory of your choice.
+1. Clone this repository to your local machine using Git or download the ZIP file and extract it to a directory of your choice.
 
 ```bash
 git clone https://github.com/JakubKorytko/algorithms-library.git
