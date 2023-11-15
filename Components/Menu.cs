@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Net.NetworkInformation;
 using AlgorithmsLibrary.AlgorithmsCore;
 
 namespace AlgorithmsLibrary
@@ -113,7 +112,8 @@ namespace AlgorithmsLibrary
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("You chose wrong option from the menu! (enter '");
-            PrintDescription("menu");
+            PrintCommand("menu");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("' to display menu again)");
             Console.ResetColor();
         }
