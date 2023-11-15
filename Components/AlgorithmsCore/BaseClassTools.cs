@@ -4,7 +4,7 @@ namespace AlgorithmsLibrary.AlgorithmsCore
 {
     internal class BaseClassTools
     {
-        public bool IntParseTest(string num)
+        protected bool IntParseTest(string num)
         {
 
             bool isNumber = int.TryParse(num, out int _);
@@ -13,7 +13,7 @@ namespace AlgorithmsLibrary.AlgorithmsCore
 
         }
 
-        public bool IntParseTestWithOutput(string num)
+        protected bool IntParseTestWithOutput(string num)
         {
             bool testResult = IntParseTest(num);
             if (testResult)
