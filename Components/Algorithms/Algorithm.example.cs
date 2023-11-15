@@ -19,12 +19,10 @@ namespace AlgorithmsLibrary.Algorithms
         // private method, you can add as many as you want
         private string GetMessage(string text)
         {
-            return "Im the algorithm! " +
-                text +
-                exclamationMark +
-                " 1 + 1 = " +
-                // method defined in the AlgorithmsCore/BaseClassTools.cs
-                OnePlusOne();
+            // method defined in the AlgorithmsCore/BaseClassTools.cs
+            int two = OnePlusOne();
+
+            return "Im the algorithm! " + text + exclamationMark + " 1 + 1 = " + two;
         }
 
         // ovverride Display method to handle algorithm output
