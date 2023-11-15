@@ -49,6 +49,7 @@
     <Compile Include="Components\AlgorithmsCore\BaseClass.cs" />
     <Compile Include="Components\AlgorithmsCore\BaseClassTools.cs" />
     <Compile Include="Components\Algorithms\Eratosthenes.cs" />
+    <Compile Include="Components\Algorithms\Algorithm.example.cs" />
     <Compile Include="Components\Algorithms\Factorial.cs" />
     <Compile Include="Components\Algorithms\Fibonacci.cs" />
     <Compile Include="Components\Algorithms\Hanoi.cs" />

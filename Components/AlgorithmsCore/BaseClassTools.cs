@@ -31,5 +31,12 @@ namespace AlgorithmsLibrary.AlgorithmsCore
                 return false;
             }
         }
+
+        // example of the method to use across algorithms
+        // you can use any return type or method name
+        protected int OnePlusOne()
+        {
+            return 1 + 1;
+        }
     }
 }
