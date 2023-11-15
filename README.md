@@ -63,7 +63,7 @@ or download the ZIP file and extract it to a directory of your choice:
       - `Ctrl + B` / `Ctrl + Shift + B` by default
       - or `Build` -> `Build Solution` / `Build AlgorithmsLibrary` on the toolbar
 
-    The executable will be available in the "build/" subdirectory of the root directory.
+    The executable will be available in the `build` directory in either case.
 
 ## Usage
 
