@@ -14,6 +14,8 @@
   - [Installation](#installation)
   - [Usage](#usage)
   - [Extending Algorithms](#extending-algorithms)
+  - [Contributing](#contributing)
+  - [Contact](#contact)
   - [License](#license)
 
 ## Introduction
@@ -120,6 +122,16 @@ In the file, is a sample method that you can check to create your own.
 
 *(also, there are already some methods there to parse integers from the input,
 check them out if you are interested)*.
+
+## Contributing
+
+If you find issues or have suggestions for improvement,
+feel free to open an issue or submit a pull request.
+Contributions are welcome!
+
+## Contact
+
+If you have any questions, please contact me at <jakub@korytko.me>.
 
 ## License
 
