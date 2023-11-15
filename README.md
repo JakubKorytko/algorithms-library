@@ -13,7 +13,10 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Extending Algorithms](#extending-algorithms)
+    - [Available commands](#available-commands)
+    - [Available algorithms](#available-algorithms)
+    - [Adding algorithms](#adding-algorithms)
+    - [Adding shared methods](#adding-shared-methods)
   - [Contributing](#contributing)
   - [Contact](#contact)
   - [License](#license)
@@ -42,15 +45,15 @@ or download the ZIP file and extract it to a directory of your choice:
     git clone https://github.com/JakubKorytko/algorithms-library.git
     ```
 
-2. Enter the project directory:
+1. Enter the project directory:
 
     ```bash
     cd algorithms-library
     ```
 
-3. Open the `AlgorithmsLibrary.sln` solution file in Visual Studio.
+1. Open the `AlgorithmsLibrary.sln` solution file in Visual Studio.
 
-4. Build or run the project in Visual Studio:
+1. Build or run the project in Visual Studio:
 
     - **Run the project** in the Visual Studio
       - `F5` /  `Ctrl + F5` by default
@@ -60,78 +63,77 @@ or download the ZIP file and extract it to a directory of your choice:
       - `Ctrl + B` / `Ctrl + Shift + B` by default
       - or `Build` -> `Build Solution` / `Build AlgorithmsLibrary` on the toolbar
 
-    Executable will be available in the "build/" subdirectory of the root directory.
+    The executable will be available in the "build/" subdirectory of the root directory.
 
 ## Usage
 
 The application has an intuitive text-based menu.
-On launch, the menu is displayed and the application waits for your input.
+On launch, the menu is displayed and the application waits for your input **(case-insensitive)**.
 
-Available commands (case-insensitive) include:
+### Available commands
 
-- `<algorithm_name>` - run the selected algorithm
+- `<algorithm_name>` - execute the selected [algorithm](#available-algorithms)
 - `menu` - display the menu options
 - `exit`
 
-Basic algorithms include:
+### Available algorithms
 
 - **Eratosthenes** (Sieve of Eratosthenes)
-- **SuperAlgorithm** (an example algorithm with no input)
+- **SuperAlgorithm** (a sample algorithm without input)
 - **Factorial** (Factorial calculator)
 - **Fibonacci** (Fibonacci sequence calculator)
 - **Hanoi** (Hanoi tower solver)
 - **Triangular** (Triangular numbers calculator)
 
-To extend algorithms, see the section below.
+### Adding algorithms
 
-## Extending Algorithms
-
-To add a new algorithm,
-add a new class to the `Components/Algorithms` folder.
+Add a new class to the `Components/Algorithms` folder.
 Make sure that the class is derived from the `Algorithm` class
-in the `AlgorithmsLibrary.AlgorithmsCore` namespace.
+(`AlgorithmsLibrary.AlgorithmsCore` namespace).
 
 Also, the class should:
 
-1. Override the public void method called `Display`
-that is used to run the algorithm
-(you need to handle the output within this function)  
+1. Override the public void method named `Display`
+which is used to execute the algorithm
+(you must handle the output within this function)  
 
-    - **IF NOT**: The application will display
+   - **IF NOT**: The application will display
     `No display method defined for this algorithm`
     when you try to select it from the menu.
 
-2. Override public virtual string `Description`:
+1. Override the public virtual string `Description`:
 
     ```c#
     public override string Description { get { return "..."; } }
     ```
 
-    - **IF NOT**: The application will display
+   - **IF NOT**: The application will display
     `No description provided for this algorithm`
     next to it in the printed menu.
 
-3. Have a unique class name that is displayed in the menu.
+1. Have a unique class name that is displayed in the menu.
 
 For example, see `Components/Algorithms/Algorithm.example.cs`
 
-If you need to include a method that is available to all algorithms,
-add new method to the `Components/AlgorithmsCore/BaseClassTools.cs`.
+### Adding shared methods
 
-In the file, is a sample method that you can check to create your own.
+If you need to add a method that is available to all algorithms,
+add a new method to the `Components/AlgorithmsCore/BaseClassTools.cs` file.
 
-*(also, there are already some methods there to parse integers from the input,
+The file contains a sample method that you can check to create your own.
+
+*(Also, there are already some methods there to parse integers from the input,
 check them out if you are interested)*.
 
 ## Contributing
 
-If you find issues or have suggestions for improvement,
+If you find issues or have suggestions for improvements,
 feel free to open an issue or submit a pull request.
 Contributions are welcome!
 
 ## Contact
 
-If you have any questions, please contact me at <jakub@korytko.me>.
+If you have any questions, feel free to contact me at <jakub@korytko.me>.
 
 ## License
 
