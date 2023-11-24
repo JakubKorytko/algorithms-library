@@ -5,7 +5,7 @@
 ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-[![Run Super-Linter](https://github.com/JakubKorytko/algorithms-library/actions/workflows/super-linter.yml/badge.svg?branch=1.0.0)](https://github.com/JakubKorytko/algorithms-library/actions/workflows/super-linter.yml?branch=1.0.0)
+[![Run Super-Linter](https://github.com/JakubKorytko/algorithms-library/actions/workflows/super-linter.yml/badge.svg?branch=0.1.0-alpha.1)](https://github.com/JakubKorytko/algorithms-library/actions/workflows/super-linter.yml?branch=0.1.0-alpha.1)
 
 ## Table of Contents
 
